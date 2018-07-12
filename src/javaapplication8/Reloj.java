@@ -65,17 +65,19 @@ public class Reloj {
         if(segundo >= 0 && minuto <= 59){
         this.segundo = segundo;
         }else{
-            System.out.print("Segundos incorrectos, asigne el valor de 0.");
+            System.out.println("Segundos incorrectos, asigne el valor de 0.");
             this.segundo = 0;
         }
     }
     
     public String mostrarTiempo24Horas(){
-        return String.format("%d:%d:%d" , hora , minuto , segundo);
+        return String.format("%02d:%02d:%02d" , hora , minuto , segundo);
     }
     
     
-    
+    public String mostrarTiempo12Horas(){
+        return String.format("%02d:%02d:%02d %s" , hora == 0 || hora == 12 ? 12 : hora % 12 ,minuto ,segundo , hora < 12 ? "AM" : "PM");
+    }
     
     
     

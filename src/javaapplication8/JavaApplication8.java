@@ -15,12 +15,12 @@ public class JavaApplication8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Reloj reloj = new Reloj (12,59,59);
+        Reloj reloj = new Reloj (18,-6,-6);
         
-        reloj.setHora(14);
+        //reloj.setHora(14);
         
         System.out.println(reloj.mostrarTiempo24Horas());
-        
+        System.out.println(reloj.mostrarTiempo12Horas());
         
            
     }
